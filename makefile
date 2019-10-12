@@ -1,0 +1,18 @@
+OPENVBS_SRCPATH=../src/
+BUILD_PATH=build/
+
+CC  = gcc
+CPC = g++
+
+#OPT = -O0 -g
+OPT = -O0
+
+all: counter
+
+counter: COUNTER.cpp
+	$(CPC) -Wall -std=c++14 $(OPT) -I$(OPENVBS_SRCPATH) -shared COUNTER.cpp $(OPENVBS_SRCPATH)npole.cpp -o $(BUILD_PATH)COUNTER.so
+	echo {92DCA431-FA00-414D-82C0-76D5313BF5C4} > $(BUILD_PATH)COUNTER
+	ln -s -f $(BUILD_PATH)COUNTER $(BUILD_PATH){92DCA431-FA00-414D-82C0-76D5313BF5C4}
+
+clean:
+	rm -f $(BUILD_PATH)*

@@ -1,0 +1,4 @@
+c = CreateObject("COUNTER")
+WScript.Echo c.Get
+c.Inc
+WScript.Echo c.Get

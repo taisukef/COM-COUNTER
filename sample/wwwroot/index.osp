@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OSPはじめのいっぽ</title>
+</head>
+<body>
+<h1>OSP はじめのいっぽ!</h1>
+
+<%
+c = CreateObject("COUNTER")
+c.Inc
+%>
+ようこそ、あなたは <% Response.Write c.Get %> ばんめのお客様！
+
+<br>
+<div style="white-space:pre-wrap; display: inline-block; border:2px solid gray; margin:1em; padding: 1em;">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;OSPはじめのいっぽ&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;OSP はじめのいっぽ!&lt;/h1&gt;
+
+&lt;%
+c = CreateObject("COUNTER")
+c.Inc
+%&gt;
+ようこそ、あなたは &lt;% Response.Write c.Get %&gt; ばんめのお客様！
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+</body>
+</html>

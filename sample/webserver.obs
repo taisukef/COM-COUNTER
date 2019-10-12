@@ -1,0 +1,2 @@
+osp = new OpenASP
+osp()
